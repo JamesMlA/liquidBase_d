@@ -9,7 +9,7 @@
 
  copia el archivo llamado liquibase.properties a la ruta donde trabajas con la base de datos
 
-abre el archivo y cambia este parametro por este 
+abre el archivo y cambia la linea que tienes por esta  
 ```
 # Enter the path for your changelog file.
 changeLogFile=changelog.sql
@@ -35,14 +35,13 @@ ahora abre la terminal y coloca
  ```
 ### configurando el entorno 
 
-ahora tienes el changelog con el estado actual de la base de datos copialo y pegalo en el directorio de el repositorio llamado changelogs
-tambien pudes crear la carpeta en tu directorio y pegar ahi el archivo generado
+ahora tienes el changelog con el estado actual de la base de datos. copialo y pegalo en el directorio de el repositorio llamado changelogs; tambien pudes crear la carpeta en tu directorio y pegar ahi el archivo generado
 
 cada que vallas a agregar un nuevo cambio deberas guardarlo en esar carpeta  
 
-si lo haces en una carpeta en tu directorio copia el archivo llamado changelog de el repositorio y pegalo afuera de la carpeta changelogs como esta en el repositorio y abrelo
+si lo haces en una carpeta en tu directorio copia el archivo llamado changelog.xml de el repositorio y pegalo afuera de la carpeta changelogs como esta en el repositorio y abrelo
 
-ahora si no solo dejalo ahi y abrelo
+ahora si no, solo dejalo ahi y abrelo
 
 ya abierto veras unas lineas de ejemplo donde llamo a los archivos del repositorio que estan dentro de la carpeta changelogs
 
@@ -72,7 +71,7 @@ se llamaran:
 databasechangelog
 databasechangeloglock
 
-estas bases de datos son para llevar el control por si alguien manda un cambio lo veras reflejado ahi 
+estas bases de datos son para llevar el control, si alguien manda un cambio lo veras reflejado ahi 
 
 ### notas
 
@@ -95,4 +94,4 @@ liquidbase tag "name of the version"        [give a tag for make rollbacks]
 
 liquidbase rollback name of the tag     [rollback to the tag]
 
-more command !(here)[https://docs.liquibase.com/commands/home.html]
+mas comandos https://docs.liquibase.com/commands/home.html
