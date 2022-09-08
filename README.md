@@ -1,19 +1,22 @@
-### liquibase
+## liquibase
 
-#### requeriments
+### requisitos
 
 - liquibase https://www.liquibase.org/download
-- clone this repository
+- clonar este repositorio
 
-## generating changelog
+## generando el changelog
 
- copy the file named liquibase.properties to you data base path and opened
+ copia el archivo llamado liquibase.properties a la ruta donde trabajas con la base de datos
 
- change this parameters
+abre el archivo y cambia este parametro por este 
 ```
 # Enter the path for your changelog file.
 changeLogFile=changelog.sql
 
+```
+en las siguientes lines coloca tu informacion
+```
 #### Enter the Target database 'url' information  ####
 liquibase.command.url=jdbc:postgresql://localhost:5432/prueba
 
@@ -25,27 +28,35 @@ liquibase.command.password: secret
 
 ```
 
- open the terminal and run
+ahora abre la terminal y coloca 
 
  ```
  liquidbase generateChangelog
  ```
+### configurando el entorno 
 
-now you have the changes.sql copy and paste in the repository folder called changelogs
+ahora tienes el changelog con el estado actual de la base de datos copialo y pegalo en el directorio de el repositorio llamado changelogs
+tambien pudes crear la carpeta en tu directorio y pegar ahi el archivo generado
 
-in this folder yo gona put all the changes that you make 
+cada que vallas a agregar un nuevo cambio deberas guardarlo en esar carpeta  
 
-now open changelog.xml
+si lo haces en una carpeta en tu directorio copia el archivo llamado changelog de el repositorio y pegalo afuera de la carpeta changelogs como esta en el repositorio y abrelo
 
-here you gona se that im using the archives called example delete and crete put this 
+ahora si no solo dejalo ahi y abrelo
 
+ya abierto veras unas lineas de ejemplo donde llamo a los archivos del repositorio que estan dentro de la carpeta changelogs
+
+borralas ya que solo son un ejemplo de como tienes que ir agregando cada cambio a futuro
+ya borradas ahora agregaremos el changelog que generaste (esto no afectara en nada a la base de datos ya que detecta que ya tiene los cambios y solo lo ignorara)
+
+pon esto donde estaban las lines que copiaste 
 ```
 <include file"changelogs/nombre del changelog"/>
 ```
 
-now open a terminar and put
+ahora abre la terminal en ese directorio y corre
 
-(WARNING this gona upload the changes to the database)
+(CUIDADO!!! esto subira los cambios directo a la base de datos asi que no lo hagas sin revisar antes todo ya que a este punto aun no has configurado los rollbacks)
 
 ```
 - liquidbase status 
@@ -65,14 +76,14 @@ estas bases de datos son para llevar el control por si alguien manda un cambio l
 
 ### notas
 
-cuando siempre procura agregar los rollbacks en los changelos el primero que generes no los tendra pero a los nuevos agregale todo lo que tienen los ejemplos 
+siempre procura agregar los rollbacks en los changelos el primero que generes no los tendra pero a los nuevos agregale todo lo que tienen los ejemplos 
 
 despues de hacer un update has un liquidbase tag <nomrbe del tag> para que asi puedas volver con ese tag a la version anterior 
 
-(pense en hacer un repositorio privado desde ya donde podamos tenes todo junto para que los changelogs que se vallan subiendo los puedan tener todos en sus maquinas)
-(dime que piensas de la idea cualquier cosa estoy en slack)
+(seria mejor tener repositorio privado donde puedan tener todo junto para que los changelogs que se vallan subiendo los puedan tener todos en sus maquinas)
+(dime que piensas de la idea si quieres implementarla dimelo y entonces mejor ya hago yo todo esto y solo les paso el link de ese repositorio privado para que suban sus changelogs y ver si todo va bien antes de que lo manden al servidor. cualquier cosa estoy en slack)
 
-#### commands
+### commands
 
 liquidbase status       [show the status]
 
