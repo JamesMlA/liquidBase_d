@@ -79,8 +79,7 @@ siempre procura agregar los rollbacks en los changelos el primero que generes no
 
 despues de hacer un update has un liquidbase tag <nomrbe del tag> para que asi puedas volver con ese tag a la version anterior 
 
-(seria mejor tener repositorio privado donde puedan tener todo junto para que los changelogs que se vallan subiendo los puedan tener todos en sus maquinas)
-(dime que piensas de la idea si quieres implementarla dimelo y entonces mejor ya hago yo todo esto y solo les paso el link de ese repositorio privado para que suban sus changelogs y ver si todo va bien antes de que lo manden al servidor. cualquier cosa estoy en slack)
+(seria mejor tener repositorio privado donde puedan tener todo junto para que los changelogs que se vallan subiendo los puedan tener todos en sus maquinas. dime que piensas de la idea para proponerla e implementarla si eso pasara, entonces mejor ya hago yo todo esto y solo les paso el link de ese repositorio privado para que suban sus changelogs y ver si todo va bien antes de que lo manden al servidor. cualquier cosa estoy en slack)
 
 ### commands
 
